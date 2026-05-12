@@ -1,7 +1,15 @@
 body {
     background : black ;
     color : white;
-
+      font-family :'Times New Roman', Times, serif;
+}
+h1 {
+    font-size: 36px;
+    color: #333;
+}
+h2 {
+    font-size: 26px;
+    color: #333;
 }
 header {
     background : white ;
@@ -9,7 +17,7 @@ header {
     text-align : center; 
     width : auto;
     margin-bottom : 30px;
-    padding : 50 px ;
+    padding : 50px ;
     border : 2px solid rgb(242, 11, 11) ; 
    
 
@@ -42,10 +50,10 @@ header {
 main {
     background : white ;
     color : black ;
-    font-family :'Times New Roman', Times, serif;
+  
     width : auto;
     margin-bottom : 10px ;
-    padding : 10 px ;
+    padding : 10px ;
     border : 2px solid rgb(11, 161, 242) ; 
 
 }
