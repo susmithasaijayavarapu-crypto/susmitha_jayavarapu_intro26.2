@@ -1,0 +1,99 @@
+body {
+    background : black ;
+    color : white;
+
+}
+header {
+    background : white ;
+    color : black ;
+    text-align : center; 
+    width : auto;
+    margin-bottom : 30px;
+    padding : 50 px ;
+    border : 2px solid rgb(242, 11, 11) ; 
+   
+
+}
+.stickyheader{
+     position: sticky;
+     top: 0;
+
+}
+.menu ul{
+    display : flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+
+}
+.menu li{
+    flex : 1;
+    text-align: center;
+}
+.menu a {
+    color: rgb(9, 8, 8);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: orange;
+}
+main {
+    background : white ;
+    color : black ;
+    font-family :'Times New Roman', Times, serif;
+    width : auto;
+    margin-bottom : 10px ;
+    padding : 10 px ;
+    border : 2px solid rgb(11, 161, 242) ; 
+
+}
+footer{
+    
+    background : rgb(46, 236, 198) ;
+    color : black ;
+    font-style : italic;
+    font-size : 30px;
+    width : auto;
+    margin-top : 30px;
+    
+    border : 2px solid rgb(212, 7, 14) ; 
+    
+
+}
+.features {
+    display : flex ;
+    
+    list-style : none;
+    gap : 20px;
+    padding : 0;
+}
+.features li{
+    flex : 1;
+    text-align: center;
+}
+.features img {
+    width: 80px;
+    height: 80px;
+    margin: 15px;
+    border-radius: 10px;
+    
+}
+.expList {
+    display : flex ;
+    list-style : none;
+    gap : 20px;
+    border : 2px solid red;
+    padding : 0;
+
+}
+.expList li {
+    flex : 1;
+    background: #8fdb82;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: medium;
+    font-weight: 400;
+}
