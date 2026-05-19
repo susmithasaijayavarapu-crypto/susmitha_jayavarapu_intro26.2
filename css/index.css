@@ -59,7 +59,7 @@ main {
 }
 #Connect {
     
-    background : rgb(46, 236, 198) ;
+    background : #8fdb82 ;
     color : black ;
     font-style : italic;
     font-size : 30px;
@@ -105,15 +105,15 @@ main {
     font-size: medium;
     font-weight: 400;
 }
-#Skills ul {
+#skills ul {
   display: flex;
   flex-wrap: wrap;     /* Allows items to drop to the next line on small screens */
   gap: 12px;           /* Puts spacing between the items */
   padding: 0;
   list-style: none;    /* Removes the default bullet points */
 }
-#Skills li {
-  background-color :aliceblue;
+#skills li {
+  background-color : #8fdb82;
   color: #333333;
   padding: 8px 16px;
   border-radius: 20px; /* Makes them look like rounded pills */
