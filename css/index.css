@@ -57,9 +57,9 @@ main {
     border : 2px solid rgb(11, 161, 242) ; 
 
 }
-footer{
+#Connect {
     
-    background : rgb(46, 236, 198) ;
+    background : #8fdb82 ;
     color : black ;
     font-style : italic;
     font-size : 30px;
@@ -104,4 +104,19 @@ footer{
     text-align: center;
     font-size: medium;
     font-weight: 400;
+}
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;     /* Allows items to drop to the next line on small screens */
+  gap: 12px;           /* Puts spacing between the items */
+  padding: 0;
+  list-style: none;    /* Removes the default bullet points */
+}
+#skills li {
+  background-color : #8fdb82;
+  color: #333333;
+  padding: 8px 16px;
+  border-radius: 20px; /* Makes them look like rounded pills */
+  font-size: 0.95rem;
+  font-weight: 500;
 }
