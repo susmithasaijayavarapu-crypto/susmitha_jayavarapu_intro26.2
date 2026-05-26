@@ -159,6 +159,11 @@ form button:hover,
 li button:hover {
   opacity: 0.9;
 }
+#messages {
+display : none;
+
+}
+
 #messages ul {
   list-style: none;
   padding: 0;
