@@ -26,10 +26,11 @@ messageForm.addEventListener('submit', function(event) {
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Message:", message);
-    const messageSection = document.getElementById('Messages');
+    const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector("ul");
     const newMessage  = document.createElement("li"); 
-    newMessage.innerHTML =`<a href = "mailto : ${email}"> ${name} </a><br>
+    messageSection.style.display = "block";
+    newMessage.innerHTML =`<a href = "mailto:${email}"> ${name} </a><br>
     <span> ${message}  </span> <br>` ;
     const removeButton = document.createElement("button");
     removeButton .innerText = "remove";
