@@ -120,3 +120,76 @@ main {
   font-size: 0.95rem;
   font-weight: 500;
 }
+form {
+  background-color : #8fdb82;
+  color : black ;
+  display: flex;
+  flex-direction: column;
+  
+  max-width: 300px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+form label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+form button,
+li button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+form button:hover,
+li button:hover {
+  opacity: 0.9;
+}
+#messages {
+display : none;
+
+}
+
+#messages ul {
+  list-style: none;
+  padding: 0;
+}
+
+#messages li {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+@media (max-width: 600px) {
+  form {
+    padding: 0.5rem;
+  }
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+}
