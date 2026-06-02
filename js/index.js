@@ -76,7 +76,13 @@ fetch("https://api.github.com/users/susmithasaijayavarapu-crypto/repos")
 
 })
 .catch(error => {
-    console.error("An error occured:", error);
+   console.error("An error occurred:", error);
+
+    const projectSection = document.getElementById("Projects");
+    const errorMessage = document.createElement("p");
+    errorMessage.style.color = "red";
+    errorMessage.innerText = "Sorry, I am currently unable to load my GitHub repositories. Please check back later!";
+    projectSection.appendChild(errorMessage);
 });
 
 
