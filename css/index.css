@@ -18,7 +18,7 @@ header {
     width : auto;
     margin-bottom : 30px;
     padding : 50px ;
-    border : 2px solid rgb(242, 11, 11) ; 
+    border: 1px solid #ddd; 
    
 
 }
@@ -65,8 +65,7 @@ main {
     font-size : 30px;
     width : auto;
     margin-top : 30px;
-    
-    border : 2px solid rgb(212, 7, 14) ; 
+    border: 1px solid #ddd;
     
 
 }
@@ -90,14 +89,16 @@ main {
 }
 .expList {
     display : flex ;
+    flex-wrap :wrap;
     list-style : none;
-    gap : 20px;
-    border : 2px solid red;
+    gap : 15px;
+    border: 1px solid #ddd;
     padding : 0;
 
 }
 .expList li {
-    flex : 1;
+    
+    
     background: #8fdb82;
     padding: 30px;
     border-radius: 10px;
@@ -192,4 +193,20 @@ display : none;
   nav {
     flex-direction: column;
   }
+}
+#Projects ul {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 15px;       /* Adds space between items */
+  list-style: none; /* Removes default bullet points */
+  padding: 0;
+}
+#Projects ul li {
+  background-color:  #8fdb82;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+ 
+  text-align: center;
+ 
 }

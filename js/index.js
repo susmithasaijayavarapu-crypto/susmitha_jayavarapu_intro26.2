@@ -50,3 +50,42 @@ messageForm.addEventListener('submit', function(event) {
     
     messageForm.reset();
 });
+
+fetch("https://api.github.com/users/susmithasaijayavarapu-crypto/repos")
+.then(response => {
+    if(!response.ok){
+        throw new Error("Request Failed");
+    }
+    return response.json();
+})
+.then(data => {
+    const repositories = data;
+    console.log(repositories);
+    return repositories;
+})
+.then ((repositories) => {
+    
+    const projectSection = document.getElementById("Projects");
+    const projectList = projectSection.querySelector("ul");
+    for (let i= 0; i< repositories.length; i++){
+    const project = document.createElement("li");
+    
+    project.innerText = repositories[i].name;
+    projectList.appendChild(project);
+}
+
+})
+.catch(error => {
+   console.error("An error occurred:", error);
+
+    const projectSection = document.getElementById("Projects");
+    const errorMessage = document.createElement("p");
+    errorMessage.style.color = "red";
+    errorMessage.innerText = "Sorry, I am currently unable to load my GitHub repositories. Please check back later!";
+    projectSection.appendChild(errorMessage);
+});
+
+
+
+
+
