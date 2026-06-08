@@ -34,7 +34,7 @@ async function fetchData(type){
 
         if(type == "temperature")
         {
-            display.innerText = `current Temperature : ${data.current.temperature_2m}`;
+            display.innerText = `current Temperature : ${data.current.temperature_2m} °C`;
         }
         else {
             const code = data.current.weather_code;
