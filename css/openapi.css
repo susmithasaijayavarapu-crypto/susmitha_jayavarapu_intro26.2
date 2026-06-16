@@ -1,7 +1,8 @@
 body {
         font-family: 'Segoe UI';
-        display: flex;
-        flex-direction: column;
+        display: flex;          /* Activates Flexbox */
+        flex-direction: column; /* Stacks items vertically */
+        gap: 10px;              /* Adds space between the stacked items */
         align-items: center;
         padding-top: 50px;
         background-color: #f4f7f6;
@@ -11,9 +12,7 @@ body {
         color: #333;
     }
 
-    .button-container {
-        margin-bottom: 20px;
-    }
+ 
 
     button {
         padding: 12px 24px;
@@ -24,7 +23,7 @@ body {
         color: white;
         border: none;
         border-radius: 8px;
-        transition: background-color 0.3s ease;
+        
     }
 
     button:hover {
@@ -42,3 +41,4 @@ body {
         font-size: 1.2rem;
         color: #444;
     }
+   

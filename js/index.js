@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 const footerEle = document.createElement('footer');
-
+/* Insert the copyright logo, current year, and student's name in the footer of index.html */
 body.appendChild(footerEle);
 const today = new Date();
 const thisYear = today.getFullYear();
@@ -8,6 +8,8 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 copyright.innerHTML = `&copy; Susmitha Jayavarapu ${thisYear}`;
 footer.appendChild(copyright);
+
+/* Using an array, insert the array items as a list of skills in the skills section of index.html*/
 
 const skills =["JavaScript", "HTML", "CSS", "Adobe Photoshop", "GitHub"];
 const skillsSection  = document.getElementById('skills');
@@ -30,10 +32,13 @@ messageForm.addEventListener('submit', function(event) {
     const messageList = messageSection.querySelector("ul");
     const newMessage  = document.createElement("li"); 
     messageSection.style.display = "block";
+
+    /* Convert form inputs into the author's name as a clickable link*/
+
     newMessage.innerHTML =`<a href = "mailto:${email}"> ${name} </a><br>
     <span> ${message}  </span> <br>` ;
     const removeButton = document.createElement("button");
-    removeButton .innerText = "remove";
+    removeButton .innerText = "Remove";
     removeButton.type = "button";
 
     removeButton.addEventListener('click', function(event){
@@ -45,6 +50,8 @@ messageForm.addEventListener('submit', function(event) {
         }
        
     });
+    /* Display their message and Provide a remove button to delete the message */
+
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     
