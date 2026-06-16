@@ -36,11 +36,14 @@ messageForm.addEventListener('submit', function(event) {
     /* Convert form inputs into the author's name as a clickable link*/
 
     newMessage.innerHTML =`<a href = "mailto:${email}"> ${name} </a><br>
-    <span> ${message}  </span> <br>` ;
+    <span class="message-content"> ${message}  </span>  <input type="text" class="edit-input" style="display:none;">
+    <br>` ;
+
+    // 1. Create remove Button
     const removeButton = document.createElement("button");
     removeButton .innerText = "Remove";
     removeButton.type = "button";
-
+    removeButton.classList.add("btn-remove");
     removeButton.addEventListener('click', function(event){
         const entry = removeButton.parentNode;
         console.log(entry);
@@ -50,8 +53,38 @@ messageForm.addEventListener('submit', function(event) {
         }
        
     });
-    /* Display their message and Provide a remove button to delete the message */
 
+    // 2. Create Edit Button
+    const editButton = document.createElement("button");
+    editButton.innerText = "Edit";
+    editButton.type = "button";
+    editButton.classList.add("btn-edit");
+    editButton.addEventListener('click', function() {
+        const span = newMessage.querySelector('.message-content');
+        const input = newMessage.querySelector('.edit-input');
+        if (editButton.innerText === "Edit") {
+            // Switch to Edit Mode
+            
+            input.type = 'text';
+            input.value = span.innerText;
+            input.className = 'edit-input';
+            
+            span.style.display = "none";  // Hide span
+        input.style.display = "inline-block";
+            editButton.innerText = "Save";
+        } else {
+            // Switch to Save Mode
+            span.innerText = input.value;
+            
+            span.style.display = "inline-block"; // Show span
+            input.style.display = "none";
+            editButton.innerText = "Edit";
+        }
+    });
+
+
+    /* Display their message and Provide a remove button to delete the message */
+    newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     
